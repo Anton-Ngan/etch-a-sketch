@@ -3,15 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="etch.js" defer></script>
-    <title>Document</title>
+    <title>Etch-a-Sketch</title>
 </head>
 
 <body>
+
+    <div class="header">
+        <div class="title">Etch-a-Sketch</div>
+        <div class="mode">Button</div>
+    </div>
+
+    <div class="buttons">
+        <div class="slide-container">
+            <div class="slider-value"></div>
+            <input type="range" id="range" min="2" max="100" value="16" class="slider">
+        </div>
+        <hr>
+        <div class="clear-icon">
+            Clear
+        </div>
+        <div class="show-grid-icon">
+            Grid
+        </div>
+        <hr>
+        <div class="colour-wheel">
+            <input type="color" value="#ff0000">
+        </div>
+        <div class="draw-mode">
+            Draw
+        </div>
+        <div class="rainbow-mode">
+            Rainbow
+        </div>
+        <div class="gray-scale">
+            Gray
+        </div>
+        <div class="erase-icon">
+            Erase
+        </div>
+
+    </div>
     
     <div class="container">
         <div class="whiteboard"></div>
+    </div>
+
+    <div class="footer">
+        <div>2025 - <a href="https://github.com/Anton-Ngan" target="_blank" rel="noopener noreferrer">Anton</a></div>
     </div>
 
 </body>
