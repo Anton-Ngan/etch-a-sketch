@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: rgba(0, 0, 0, 0.692);
+    background-color: rgba(0, 0, 0, 0.582);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -27,14 +27,28 @@ body {
 }
 
 .buttons {
-    color: goldenrod;
+    color: rgb(172, 125, 7);
     align-self: center;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 20px;
     border-bottom: 2px solid goldenrod;
-    padding: 10px;
+    padding: 10px 5px 7.5px 5px;
     margin: 25px 0 10px 0;
+}
+
+.menu-button {
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.menu-button:hover {
+    background-color: rgba(218, 165, 32, 0.459);
+    transform: scale(1.5);
 }
 
 .slider {
@@ -69,6 +83,16 @@ hr {
     border: 1px solid goldenrod;
 }
 
+.color-wheel {
+    border: 1px solid rgba(0, 0, 0, 0.363);
+    background-color: goldenrod;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+
 .container {
     flex: 1;
     display: flex;
@@ -81,14 +105,19 @@ hr {
     flex-shrink: 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     width: 720px;
     height: 720px;
     border: 10px solid goldenrod;
+    cursor: crosshair;
 }
 
 .square {
     box-sizing: border-box;
-    border: 1px solid whitesmoke;
+}
+
+.square.active-border {
+    border: 1.5px solid rgba(218, 165, 32, 0.644);
 }
 
 .footer {
