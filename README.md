@@ -9,13 +9,13 @@ Live Site
 
 ## Problems
 
-* <b>Problem<b>
+### Problem: Opacity
 
 I wanted to add an opacity mode which would decrease the text content area of the divs/squares/cells. However, I found that using the opacity CSS property also 
 makes the everything in the div (including the border) to go opaque.
 
 <details>
-<summary><b>Solution<b></summary>
+<summary>**Solution**</summary>
 
 I had to instead resort to using pattern matching on the RGB values (background-color) of the cells. The only property that I was interested in altering was the 
 alpha channel. Decreasing the alpha channel value decreases the opacity of just the text content and not the border of the cell. 
