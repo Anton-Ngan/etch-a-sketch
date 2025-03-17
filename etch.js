@@ -9,7 +9,7 @@ const gridButton = document.querySelector(".grid-icon");
 const colorPicker = document.querySelector(".color-wheel");
 const drawButton = document.querySelector(".draw-mode");
 const rainbowButton = document.querySelector(".rainbow-mode");
-const grayscaleButton = document.querySelector(".grayscale-mode");
+const opacityButton = document.querySelector(".opacity-mode");
 const eraseButton = document.querySelector(".erase-icon");
 
 let gridSwitch = false;
@@ -28,9 +28,9 @@ function getRandomColor() {
     return color;
 }
 
-function toggleGrayscaleButton() {
-    grayscaleButton.addEventListener("click", (e) => {
-        activeButton = "grayscale";
+function toggleOpacityButton() {
+    opacityButton.addEventListener("click", (e) => {
+        activeButton = "opacity";
     })
 }
 
@@ -65,10 +65,18 @@ function toggleClear() {
     })
 }
 
+function calcValue () {
+    let valuePercentage = (slider.value / slider.max) * 100;
+    slider.style.background = `linear-gradient(to right, #D76C82
+    ${valuePercentage}%,rgb(180, 160, 140) ${valuePercentage}%)`;
+}
+
 function updateSliderValue() {
     sliderValue.textContent = `${slider.value} x ${slider.value}`;
     slider.addEventListener("input", () =>
         {
+            calcValue();
+
             sliderValue.textContent = `${slider.value} x ${slider.value}`;
             gridHeight = slider.value;
             updateGrid();
@@ -93,7 +101,8 @@ function updateGrid () {
         newSquare.classList.add("square");
         if (gridStatus) newSquare.classList.add("active-border");
         whiteBoard.appendChild(newSquare);
-        newSquare.setAttribute("style", `width: ${squareHeight}px; height: ${squareHeight}px`);
+        // newSquare.setAttribute("style", `min-width: ${squareHeight}px; min-height: ${squareHeight}px`);
+        newSquare.style.flexBasis = `calc(100% / ${gridHeight})`;
     }
 
     drawOnGrid();
@@ -121,17 +130,18 @@ function drawOnGrid () {
 function getColor(square) {
     switch (activeButton) {
         case "draw":
+            square.style.opacity = 1;
             return colorPicker.value;
         case "eraser":
+            square.style.opacity = 1;
             return "#FFFFFF";
         case "rainbow":
-            return getRandomColor();
-        case "grayscale":
-            // if (square.style.backgroundColor !== colorPicker.value) {
-            //     square.style.opacity = 0.5;
-            // } else {
-            //     square.style.opacity += 0.1;
-            // }
+            square.style.opacity = 1;
+            const rndColor = getRandomColor()
+            colorPicker.value = rndColor;
+            return rndColor;
+        case "opacity":
+            square.style.opacity = Number(square.style.opacity) - 0.1;
             return colorPicker.value;
     }
 }
@@ -139,12 +149,13 @@ function getColor(square) {
 function main() {
     updateGrid();
     updateSliderValue();
+    calcValue();
     toggleClear();
     toggleGrid();
     toggleEraser();
     toggleDrawButton();
     toggleRainbowButton();
-    toggleGrayscaleButton();
+    toggleOpacityButton();
 }
 
 main()

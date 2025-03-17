@@ -1,12 +1,12 @@
 * {
-    font-family: "Nunito Sans";
+    font-family: "Coming Soon";
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    background-color: rgba(0, 0, 0, 0.582);
+    background-color: #EBE8DB;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -14,8 +14,17 @@ body {
     user-select: none;      
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: gainsboro;
+}
+
 .header {
-    background-color: goldenrod;
+    background-color: #D76C82;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -28,12 +37,11 @@ body {
 }
 
 .buttons {
-    color: rgb(172, 125, 7);
     align-self: center;
     display: flex;
     align-items: center;
     gap: 20px;
-    border-bottom: 2px solid goldenrod;
+    border-bottom: 2px solid #B03052;
     padding: 10px 5px 7.5px 5px;
     margin: 25px 0 10px 0;
 }
@@ -44,19 +52,19 @@ body {
     padding: 5px;
     border-radius: 5px;
     cursor: pointer;
-    transition: all 0.4s;
+    transition: all 0.2s;
 }
 
 .menu-button:hover {
-    background-color: rgba(218, 165, 32, 0.459);
-    transform: scale(1.5);
+    background-color: #D76C82;
+    transform: scale(1.3);
 }
 
 .slider {
     appearance: none;
     width: 100%;
     height: 10px;
-    background-color: whitesmoke;
+    background-color: rgb(180, 160, 140);
     border-radius: 5px;
 }
 
@@ -64,7 +72,7 @@ body {
     appearance: none;
     width: 20px;
     height: 20px;
-    background-color: goldenrod;
+    background-color: #3D0301;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -74,31 +82,26 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 15px;
-    color: goldenrod;
+    color: #3D0301;
 }
 
 hr {
-    color: goldenrod;
-    height: 25px;
-    background-color: rgba(218, 165, 32, 0.712);
-    border: 1px solid goldenrod;
+    height: 30px;
+    border: 1px solid #B03052;
 }
 
 .color-wheel {
-    border: 1px solid rgba(0, 0, 0, 0.363);
-    background-color: goldenrod;
+    border: 0px;
+    background-color: #D76C82;
     border-radius: 5px;
     cursor: pointer;
 }
-
-
-
 
 .container {
     flex: 1;
     display: flex;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 12.5px;
 }
 
 .whiteboard {
@@ -106,31 +109,31 @@ hr {
     flex-shrink: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     width: 720px;
+    max-width: 720px;
     height: 720px;
-    border: 10px solid goldenrod;
+    max-height: 720px;
+    border: 5px solid #B03052;
     cursor: crosshair;
 }
 
 .square {
-    flex-grow: 1;
-    box-sizing: border-box;
+    background-color: white;
 }
 
 .square.active-border {
-    border: 1.5px solid rgba(218, 165, 32, 0.644);
+    border: 1.5px solid #EBE8DB;
 }
 
 .footer {
     flex-shrink: 0;
-    background-color: goldenrod;
+    background-color: #D76C82;
     display: flex;
     justify-content: center;
     margin-top: 20px;
     padding: 10px;
 }
 
-.square {
-    background-color: white;
+.footer-text {
+    font-weight: 800;
 }

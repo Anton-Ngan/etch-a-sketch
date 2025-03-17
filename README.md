@@ -7,6 +7,7 @@
 * <a target="_blank" href="https://icons8.com/icon/cDmb6gHhczNC/rainbow">Rainbow</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 * <a target="_blank" href="https://icons8.com/icon/78791/grayscale">Grayscale</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 * <a target="_blank" href="https://icons8.com/icon/11637/erase">Erase</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+* <a target="_blank" href="https://icons8.com/icon/dToYpEXlcoes/opacity">Opacity</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 
 ## Inspiration
 https://gsytnik.github.io/odin-etch-a-sketch/
