@@ -15,7 +15,7 @@ I wanted to add an opacity mode which would decrease the text content area of th
 makes the everything in the div (including the border) to go opaque.
 
 <details>
-<summary>**Solution**</summary>
+<summary>Solution</summary>
 
 I had to instead resort to using pattern matching on the RGB values (background-color) of the cells. The only property that I was interested in altering was the 
 alpha channel. Decreasing the alpha channel value decreases the opacity of just the text content and not the border of the cell. 
@@ -25,8 +25,4 @@ alpha channel. Decreasing the alpha channel value decreases the opacity of just 
 
 ## Credits
 * Icons from https://www.svgrepo.com/
-
-## Inspiration
-https://gsytnik.github.io/odin-etch-a-sketch/
-https://issakass.github.io/odin-etch-a-sketch/
-https://danyapac3.github.io/etch-a-sketch/
+* Took major design inspiration from https://issakass.github.io/odin-etch-a-sketch/
