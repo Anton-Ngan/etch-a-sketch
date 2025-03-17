@@ -4,8 +4,7 @@ This project was part of The Odin Project <a href="https://www.theodinproject.co
 trouble with centering the div (half-joking about this). I aimed to go for a minimalistic style after examining what others had created. This was a great opportunity
 for me to practise my CSS and flexbox skills. 
 
-
-Live Site
+<a href="https://anton-ngan.github.io/etch-a-sketch/">Live Site</a>
 
 ## Problems
 
