@@ -1,4 +1,5 @@
-let gridHeight = 16;
+const DEFAULT_COLOR = "black";
+const DEFAULT_GRID_HEIGHT = 16;
 
 const whiteBoard = document.querySelector(".whiteboard");
 const slider = document.querySelector(".slider");
@@ -7,6 +8,11 @@ const clearButton = document.querySelector(".clear-icon");
 const gridButton = document.querySelector(".grid-icon");
 
 let gridSwitch = false;
+let mouseOn;
+let curColor = DEFAULT_COLOR;
+let gridHeight = DEFAULT_GRID_HEIGHT;
+
+
 
 function toggleGrid() {
     gridButton.addEventListener("click", () => {
@@ -14,8 +20,6 @@ function toggleGrid() {
         squares.forEach( (square) => square.classList.toggle("active-border"))
     })
 }
-
-// border: 1px solid whitesmoke;
 
 function toggleClear() {
     clearButton.addEventListener("click", () => {
@@ -52,13 +56,29 @@ function updateGrid () {
         if (gridStatus) newSquare.classList.add("active-border");
         whiteBoard.appendChild(newSquare);
         newSquare.setAttribute("style", `width: ${squareHeight}px; height: ${squareHeight}px`);
-    
-        newSquare.addEventListener("mouseover", (e) => {
-            e.currentTarget.style.backgroundColor = "black";
-            // e.currentTarget.setAttribute("style", "background-color: black;");
-        })
     }
+
+    drawOnGrid();
 } 
+
+function drawOnGrid () {
+    const squares = document.querySelectorAll(".square");
+    squares.forEach( (square) => {
+        square.addEventListener("mousedown", (e) => {
+            mouseOn = true;
+            e.preventDefault();
+            e.currentTarget.style.backgroundColor = curColor;
+        })
+
+        square.addEventListener("mouseover", (e) => {
+            if (mouseOn) e.currentTarget.style.backgroundColor = curColor;
+        })
+
+        square.addEventListener("mouseup", () => {
+            mouseOn = false;
+        })
+    } )
+}
 
 
 function main() {

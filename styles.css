@@ -113,6 +113,7 @@ hr {
 }
 
 .square {
+    flex-grow: 1;
     box-sizing: border-box;
 }
 
