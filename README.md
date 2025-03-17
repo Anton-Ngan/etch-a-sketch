@@ -1,13 +1,30 @@
 # Etch-a-sketch
 
+This project was part of The Odin Project <a href="https://www.theodinproject.com/lessons/foundations-etch-a-sketch#assignment">Etch-a-Sketch</a>. I ran into 
+trouble with centering the div (half-joking about this). I aimed to go for a minimalistic style after examining what others had created. This was a great opportunity
+for me to practise my CSS and flexbox skills. 
+
+
+Live Site
+
+## Problems
+
+* <b>Problem<b>
+
+I wanted to add an opacity mode which would decrease the text content area of the divs/squares/cells. However, I found that using the opacity CSS property also 
+makes the everything in the div (including the border) to go opaque.
+
+<details>
+<summary><b>Solution<b></summary>
+
+I had to instead resort to using pattern matching on the RGB values (background-color) of the cells. The only property that I was interested in altering was the 
+alpha channel. Decreasing the alpha channel value decreases the opacity of just the text content and not the border of the cell. 
+
+</details>
+
+
 ## Credits
-* <a target="_blank" href="https://icons8.com/icon/8112/close">Close</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-* <a target="_blank" href="https://icons8.com/icon/o15Kxsr7cBWT/health-data">Grid</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-* <a target="_blank" href="https://icons8.com/icon/59856/pencil">Draw</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-* <a target="_blank" href="https://icons8.com/icon/cDmb6gHhczNC/rainbow">Rainbow</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-* <a target="_blank" href="https://icons8.com/icon/78791/grayscale">Grayscale</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-* <a target="_blank" href="https://icons8.com/icon/11637/erase">Erase</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-* <a target="_blank" href="https://icons8.com/icon/dToYpEXlcoes/opacity">Opacity</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+* Icons from https://www.svgrepo.com/
 
 ## Inspiration
 https://gsytnik.github.io/odin-etch-a-sketch/

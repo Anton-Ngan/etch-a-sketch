@@ -46,6 +46,11 @@ a:hover{
     margin: 25px 0 10px 0;
 }
 
+.menu-button:hover {
+    background-color: #D76C82;
+    transform: scale(1.3);
+}
+
 .menu-button {
     width: 32px;
     height: 32px;
@@ -55,9 +60,9 @@ a:hover{
     transition: all 0.2s;
 }
 
-.menu-button:hover {
+.menu-button.active{
     background-color: #D76C82;
-    transform: scale(1.3);
+    transform: scale(0.75);
 }
 
 .slider {
@@ -131,7 +136,7 @@ hr {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    padding: 10px;
+    padding: 20px;
 }
 
 .footer-text {
